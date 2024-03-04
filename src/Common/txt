@@ -1,0 +1,122 @@
+
+                            <div className="sm:flex-row flex-col w-full flex gap-3">
+
+<div>
+  <p className="my-3">Title </p>
+  <Select
+    defaultValue={selectedOption}
+    onChange={setSelectedOption}
+    options={options}
+    placeholder="Mr"
+    isSearchable={false}
+    className="border-none outline-none w-full  border-transparent"
+  />
+</div>      
+
+
+<div>
+  <p className="my-3">Given Name </p>
+ <input type="text" placeholder="Passport given name" className="py-1.5 w-full  rounded-md px-8 border-2" name="" id="" />
+</div>    
+
+<div>
+  <p className="my-3">Surname </p>
+ <input type="text" placeholder="Passport given name" className="py-1.5 w-full rounded-md px-8 border-2" name="" id="" />
+</div> 
+
+
+
+</div>
+
+
+<div className="sm:flex-row flex-col flex gap-3">
+
+<div>
+<p className="my-3">Date of Birth </p>
+<div className="flex gap-2">
+<Select
+value={selectedDay}
+onChange={setSelectedDay}
+options={daysOptions}
+placeholder="Day"
+isSearchable={false}
+className="border-none outline-none border-transparent"
+/>
+<Select
+value={selectedMonth}
+onChange={setSelectedMonth}
+options={monthsOptions}
+placeholder="Month"
+isSearchable={false}
+className="border-none outline-none border-transparent"
+/>
+<Select
+value={selectedYear}
+onChange={setSelectedYear}
+options={yearsOptions}
+placeholder="Year"
+isSearchable={false}
+className="border-none outline-none border-transparent"
+/>
+</div>
+</div>      
+
+
+<div>
+<p className="my-3">Passport Number </p>
+<input type="text" placeholder="Ext001938d" className="py-1.5 rounded-md px-8 border-2" name="" id="" />
+</div>    
+
+
+
+
+
+</div>
+
+
+<div className="sm:flex-row flex-col flex gap-3">
+
+<div>
+<p className="my-3">Passport Expiry </p>
+<div className="flex gap-2">
+<Select
+value={selectedDay}
+onChange={setSelectedDay}
+options={daysOptions}
+placeholder="Day"
+isSearchable={false}
+className="border-none outline-none border-transparent"
+/>
+<Select
+value={selectedMonth}
+onChange={setSelectedMonth}
+options={monthsOptions}
+placeholder="Month"
+isSearchable={false}
+className="border-none outline-none border-transparent"
+/>
+<Select
+value={selectedYear}
+onChange={setSelectedYear}
+options={yearsOptions}
+placeholder="Year"
+isSearchable={false}
+className="border-none outline-none border-transparent"
+/>
+</div>
+</div>      
+
+
+<div>
+<p className="my-3">Nationality </p>
+<input type="text" placeholder="Pakistan" readOnly className="py-1.5 rounded-md px-8 border-2" name="" id="" />
+
+</div>    
+
+
+
+
+</div>
+
+
+<button onClick={closeModal2} className="p-2 px-8 bg-[#1476D1] text-white rounded-md flex justify-center mx-auto mt-3">Update</button>

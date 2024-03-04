@@ -1,0 +1,19 @@
+.Tab_Bar {
+    @apply text-white sm:px-4 sm:py-4 px-1 py-3 outline-none sm:text-[13px] text-[9.25px] font-semibold  bg-[#09559B] hover:text-[#09559B] active:text-[#09559B] focus:text-[#09559B] hover:bg-white focus:bg-white w-full text-center sm:font-semibold ;
+}
+
+
+// footer 
+.padding{
+    @apply py-2 cursor-pointer hover:ml-1 duration-300
+}
+
+
+
+
+// payment Tabs
+
+
+.payment_Tabs{
+    @apply border p-2 w-full  gap-2 h-20 cursor-pointer focus:bg-sky-100 focus:border-r-4 border-r-[#1476D1]  active:bg-sky-100 px-2 md:text-sm items-center justify-between border-gray-300 flex outline-none
+}

@@ -1,0 +1,185 @@
+dropdown k function
+   const [selectedOption, setSelectedOption] = useState("");
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const handleOptionChange = (e) => {
+      setSelectedOption(e.target.value);
+      setIsOpen(false); // Close dropdown panel when an option is selected
+    };
+  
+    const toggleDropdown = () => {
+      setIsOpen(!isOpen); // Toggle dropdown panel visibility
+    }; 
+ 
+ 
+ 
+ <div className='flex w-full gap-3'>
+                <div className='border  w-full rounded-lg pl-3'>
+                    <h1 className='text-sm text-gray-400'>From</h1>
+                    <div className="relative inline-block text-left">
+              <div>
+                <span className="rounded-md shadow-sm">
+                  <button
+                    onClick={toggleDropdown}
+                    type="button"
+                    className="inline-flex justify-center w-full rounded-md text-blue-700 bg-white text-sm "
+                    id="options-menu"
+                    aria-haspopup="true"
+                    aria-expanded={isOpen}
+                  >
+                    {selectedOption === "" ? "Select City" : selectedOption}
+                    {/* Arrow SVG */}
+               
+                  </button>
+                </span>
+              </div>
+
+              {/* Dropdown panel, show/hide based on dropdown state */}
+              {isOpen && (
+                <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                  <div className="py-1" role="none">
+                    <button onClick={handleOptionChange} value="Karachi" className="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Karachi</button>
+                    <button onClick={handleOptionChange} value="Lahore" className="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Lahore</button>
+                    <button onClick={handleOptionChange} value="Islamabad" className="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Islamabad</button>
+                    <button onClick={handleOptionChange} value="Quetta" className="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Quetta</button>
+                    <button onClick={handleOptionChange} value="Peshawar" className="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Peshawar</button>
+                    <button onClick={handleOptionChange} value="Multan" className="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Multan</button>
+                  </div>
+                </div>
+              )}
+            </div>
+                  </div> 
+                  <div className='flex border gap-3  rounded-lg w-full'>
+                    <div className='w-full'>
+                        <h1 className='text-sm text-gray-400'>DEPART</h1>
+                        <h1 className='text-sm'>MAY 13,2023</h1>
+                    </div>
+                    <div className='w-full'>
+                        <h1 className='text-sm text-gray-400'>RETURN</h1>
+                        <h1 className='text-sm'>MAY 13,2023</h1>
+
+                    </div>
+                  </div>
+                  <div className='border rounded-lg '>
+                  <h1 className='text-sm text-gray-400'>PASSENGERS</h1>
+
+                  </div> 
+
+
+                </div>
+
+
+           
+
+
+
+
+
+
+                <footer class="text-white bg-[#09559B] body-font">
+                  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+                      <div class="w-96 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                          <div className='flex items-center gap-2'>
+                              <img src={logo} alt="" />
+                              <h1 className=' text-xl font-bold'>Saer.pk <br />
+                                  <p className='text-sm font-normal'>By saer karo Travels and tours (smc pvt limited.)</p>
+                              </h1>
+                          </div>
+  
+  
+  
+  
+  
+                          <p class="mt-2 text-[13px] text-white">Saer.pk streamlines Umrah booking with ease, local expertise, and exclusive deals for a hassle-free spiritual journey in Pakistan.</p>
+  
+                          <div className='py-3 flex gap-3'>
+  
+                              <Icon icon="ic:baseline-facebook" width="28" height="28" />
+                              <Icon icon="mdi:instagram" width="28" height="28" />
+                              <Icon icon="formkit:twitter" width="28" height="28" />
+                          </div>
+  
+                      </div>
+                      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+  
+                          <div class="lg:w-1/3 md:w-1/2 w-full px-4">
+                              <h2 class="title-font font-medium text-white tracking-widest text-base mb-3">Useful Links</h2>
+                              <nav class="list-none leading-loose mb-10">
+                                  <li>
+                                      <a class="text-white">Privacy policy</a>
+                                  </li>
+                                  <li>
+                                      <a class="text-white">Term & Conditions</a>
+                                  </li>
+                                  <li>
+                                      <a class="text-white">Contact Us</a>
+                                  </li>
+                                  <li>
+                                      <a class="text-white">About Us</a>
+                                  </li>
+                              </nav>
+                          </div>
+                          <div class="lg:w-1/3 md:w-1/2 w-full px-4">
+                              <h2 class="title-font font-medium text-white tracking-widest text-base mb-3">Services</h2>
+                              <nav class="list-none leading-loose mb-10">
+                                  <li>
+                                      <a class="text-white">Umrah Packages</a>
+                                  </li>
+                                  <li>
+                                      <a class="text-white">Flights</a>
+                                  </li>
+                                  <li>
+                                      <a class="text-white">Hotel</a>
+                                  </li>
+                                  <li>
+                                      <a class="text-white">Insurance</a>
+                                  </li>
+                              </nav>
+                          </div>
+                          <div class="lg:w-1/3 md:w-1/2 w-full px-4">
+                              <h2 class="title-font font-medium text-white tracking-widest text-base mb-3">More</h2>
+                              <nav class="list-none leading-loose mb-10">
+                                  <li>
+                                      <a class="text-white">Visa</a>
+                                  </li>
+                                  <li>
+                                      <a class="text-white">Trips</a>
+                                  </li>
+  
+  
+                              </nav>
+                          </div>
+                      </div>
+                  </div>
+  
+  
+                  <hr />
+  
+                  <div class="bg-[#09559B]">
+                      <div class=" py-4">
+                          <p class="text-white  text-sm text-center ">© 2024 Saer.pk. All rights reserved.
+  
+                          </p>
+  
+                      </div>
+                  </div>
+              </footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
